@@ -59,66 +59,129 @@ html, body {
 
 h1, h2, h3, h4, h5 {
     font-family: 'Bangers', cursive;
-    letter-spacing: 1px;
-    margin-bottom: 15px;
+    letter-spacing: 2%;
+    margin-bottom: 3%;
 }
 
 /* Copy and paste your work from yesterday here and start to refactor into flexbox */
 
-nav {
-    margin: auto;
-    width: 876px;
+
+body{
+    margin: 5%;
 }
+nav{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    height: 10%;
+}
+
 nav a {
     text-decoration: none;
     color: grey;
-    padding: 25px;
+    padding: 2%;
 }
-nav .logo {
-    padding-left: 50px;
-}
+
 header {
-    line-height: 0.75;
-    margin: 50px 0px 50px 100px;
-    width: 876px;
+    display: flex;
+    justify-content: space-evenly;
+    margin:5% auto;
+    width: 100%;
+
 }
+
 header .title {
 	display: flex;
-    font-size: 68px;
     text-align: center;
+    justify-content: space-evenly;
+}
+header .title img {
+margin-right: -30%;
+}
+
+button{
+    background-color: white;
+    height: 15%;
+    width: 50%;
+    border: 1px solid black;
+
+
 }
 header img {
+	width: 45%;
+}
+
+.top-content {
     display: flex;
-	width: 35%;
-	justify-content: flex-end;
+    justify-content: space-evenly;
+    margin: 3% 0;
+
 }
-.top-content {
-    width: 876px;
+
+.top-content div{
+    margin: 0 1%;
 }
-.top-content {
-	display: flex;
-	justify-content: space-between;
-	padding: 10px;
-	}
+    
 .middle-img {
-    margin: 30px 0px;
+    margin: 2% 0;
+    width: 95%;
+    display: block;
+    margin-bottom: 2%;
 }
-.bottom-content {
-    width: 876px;
-}
+
 .bottom-content {
     display: flex;
-    text-align: justify;
-    padding: 10px;
+    justify-content: space-between;
+   
+} 
+.bottom-content div{
+    width: 30%;
 }
 .contact {
-    margin-top: 30px;
+    margin-top: 3%;
 }
-body { /* centers the website */
-    width: 876px;
-    margin: 0 auto;
-}
+
 footer {
-    margin-top: 50px;
+    margin-top: 4%;
     text-align: center;
+}
+
+
+ /* MEDIA QUERIES */
+
+
+@media screen and (max-width: 800px) {
+    header img {
+        display: none;
+    }
+    nav a {
+        justify-content: center;
+
+    }
+    nav img {
+        margin-left: 15%;
+        margin-top: 10%;
+    }
+
+}
+
+@media screen and (max-width: 500px) {
+    body{
+        max-width: 500px;
+    }
+
+    nav{
+        flex-direction: column;
+        align-content: center;
+        margin-top:30%
+    }
+    nav .logo-link{
+        order: -1;
+    }
+    nav a {
+        border-bottom: 1px solid grey;
+        width: 100%;
+        
+    }
 }
